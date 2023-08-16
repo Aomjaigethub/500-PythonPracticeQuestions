@@ -1,0 +1,27 @@
+#chapter14: OOP
+#question 9
+
+class USDTHB:
+    def __init__(self, amount, currency):
+        self.amount = amount
+        self.currency = currency
+
+    def to_THB(self):
+        if self.currency == "USD":
+            self.currency = "THB"  # Change the currency to THB
+            self.amount = self.amount * 30
+            return self.amount
+
+    def to_USD(self):
+        if self.currency == "THB":
+            self.currency = "USD"  # Change the currency to USD
+            self.amount = self.amount / 30
+            return self.amount
+
+
+money = USDTHB(30000, "USD")
+print(money.amount, money.currency)
+money.to_THB()
+print(money.amount, money.currency)
+money.to_USD()
+print(money.amount, money.currency)
