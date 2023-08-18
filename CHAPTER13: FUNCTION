@@ -62,8 +62,10 @@ def calculator(a, b, op):
     else:
         return "Invalid input"
 
-result = calculator(35465, 35, "/")
-print(result)
+a = int(input("a:"))
+b = int(input("b:"))
+op = str(input("op:"))
+print(calculator(a,b,op))
 
 #---------------------question 23--------------------------
 #---------------------question 24--------------------------
